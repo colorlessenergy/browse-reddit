@@ -31,3 +31,24 @@ body {
 .input-text:hover {
   border-color: rgb(22, 22, 22);
 }
+
+.subreddit-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../images/subreddit-backgroundimage.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 48%;
+  color: #fff;
+  height: 230px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.subreddit-banner__logo {
+  width: 56px;
+  height: 56px;
+  margin-left: 32px;
+}
+
+.subreddit-banner__subreddit {
+  margin-left: 20px;
+}
