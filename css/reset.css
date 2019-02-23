@@ -1,0 +1,7 @@
+/* reset button styles */
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
