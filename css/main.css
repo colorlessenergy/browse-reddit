@@ -92,21 +92,6 @@ body {
   width: 100%;
 }
 
-.post__upvotes {
-  background-color: #d2d5d8;
-  color: #1A1A1B;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 8px 4px;
-  text-align: center;
-}
-
-.post__arrow {
-  color: rgb(135, 138, 140);
-  font-size: 20px;
-}
-
-
 /* content of the posts */
 
 .content {
@@ -114,25 +99,10 @@ body {
   padding: 8px;
 }
 
-.content__date {
+.content__author {
   color: #787c7e;
   font-size: 12px;
   margin: 0;
-}
-
-.content__time:hover {
-  text-decoration: underline;
-}
-
-.content__comments {
-  color: #8b8e90;
-  font-weight: 700;
-  font-size: 12px;
-  margin: 0;
-}
-
-.content__comments:hover {
-  text-decoration: underline;
 }
 
 .content__title {
