@@ -86,7 +86,7 @@ body {
   border-radius: 4px;
   color: #000;
   display: flex;
-  max-height: 400px;
+  max-height: 450px;
   margin: 10px 0;
   text-decoration: none;
   width: 100%;
@@ -97,6 +97,7 @@ body {
 .content {
   background-color: #edeff1;
   padding: 8px;
+  width: 100%;
 }
 
 .content__author {
@@ -109,8 +110,13 @@ body {
   margin-top: 8px;
 }
 
+.content__video {
+  width: 100%;
+}
+
 .content__body {
   max-height: 250px;
+  max-width: 590px;
   overflow: hidden;
 }
 
