@@ -3,12 +3,6 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.nav__subreddit-logo {
-  width: 22px;
-  height: 22px;
-  margin: 8px;
-}
-
 .nav__reddit-logo {
   width: 32px;
   height: 32px;
@@ -33,20 +27,11 @@ body {
 }
 
 .subreddit-banner {
-  background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../images/subreddit-backgroundimage.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 48%;
+  background-color: #000;
   color: #fff;
   height: 230px;
   text-decoration: none;
   width: 100%;
-}
-
-.subreddit-banner__logo {
-  width: 56px;
-  height: 56px;
-  margin-left: 32px;
 }
 
 .subreddit-banner__subreddit {
@@ -128,9 +113,5 @@ body {
 @media only screen and (max-width: 600px) {
   .posts {
     width: 94%;
-  }
-
-  .subreddit { 
-    display: none;
   }
 }
