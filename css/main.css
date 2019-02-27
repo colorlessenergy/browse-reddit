@@ -86,7 +86,7 @@ body {
   border-radius: 4px;
   color: #000;
   display: flex;
-  max-height: 450px;
+  /* max-height: 512px; */
   margin: 10px 0;
   text-decoration: none;
   width: 100%;
@@ -111,6 +111,11 @@ body {
 }
 
 .content__video {
+  width: 100%;
+}
+
+.content__img {
+  max-height: 512px;
   width: 100%;
 }
 

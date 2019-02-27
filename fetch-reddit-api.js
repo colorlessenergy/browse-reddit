@@ -3,7 +3,9 @@
 */
 
 let fetchReddit = (function () {
+  const wrapper = document.querySelector('.posts');
   function fetchReddit(subreddit) {
+    wrapper.innerHTML = "";
     fetch('https://www.reddit.com/r/'+ subreddit + '.json', { mode: 'cors' })
       .then(function (res) {
         // readable stream
@@ -36,6 +38,8 @@ let fetchReddit = (function () {
     data.author = obj.author;
     data.title = obj.title;
     data.url = 'https://www.reddit.com' + obj.permalink;
+
+    data.picUrl = obj.url;
 
     if (obj.secure_media && obj.secure_media.reddit_video && obj.secure_media.reddit_video.scrubber_media_url) {
       data.video = obj.media.reddit_video.scrubber_media_url;
@@ -73,7 +77,6 @@ let fetchReddit = (function () {
   */
 
   function renderDataFromApi (obj) {
-    const wrapper = document.querySelector('.posts');
     const container = document.createElement('article');
     const contentWrapper = document.createElement('div');
     const pAuthor = document.createElement('p');
@@ -82,6 +85,7 @@ let fetchReddit = (function () {
     let pText = document.createElement('p');
     let video = document.createElement('video');
     let aWrapper = document.createElement('a');
+    let img = document.createElement('img');
 
 
     aWrapper.classList.add('post');
@@ -116,6 +120,13 @@ let fetchReddit = (function () {
       divContent.appendChild(video);
     }
 
+    if (obj.picUrl && !obj.text && !obj.youtubeIframe && !obj.video) {
+      img.src = obj.picUrl;
+      img.classList.add('content__img');
+
+      divContent.appendChild(img);
+    }
+
     if (obj.youtubeIframe) {
       divContent.innerHTML += (obj.youtubeIframe);
     }
@@ -139,6 +150,8 @@ let fetchReddit = (function () {
 
     return str;
   }
+
+  fetchReddit('leagueoflegends');
 
   return fetchReddit;
 })();
